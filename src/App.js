@@ -12,7 +12,7 @@ class App extends Component {
     this.state = { 
       name_value: 'John',
       names: ['diego', 'kira', 'andy', 'john'],
-      movies: [{Title: 'am I working?'}]          
+      movies: [{Title: 'Search for a movie'}]          
   };
 
     this.change_textbox = this.change_textbox.bind(this);
@@ -46,11 +46,9 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <p className="App-intro">
-          Let's make some stuff
         </p>
         <input type="text" value={this.state.name_value} onChange={this.change_textbox}/>
         <button onClick={this.click_search}>Add Name</button>
-        <Names list_of_names={this.state.names} />
         <Movies list_of_movies = {this.state.movies} />
       </div>
     );
